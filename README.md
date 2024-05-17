@@ -9,7 +9,7 @@ This repository contains a deep learning model for classifying fitness exercises
 
 ### Clone the repository
 
-git clone https://github.com/computervisioneng/sign-language-detector-python.git
+git clone [https://github.com/computervisioneng/sign-language-detector-python.git](https://github.com/ShimaaAbdalraheem/AI-Gym-Coach-)
 <br>
 
 1. Navigate to the project directory:
