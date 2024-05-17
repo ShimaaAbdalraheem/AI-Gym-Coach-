@@ -28,14 +28,13 @@ The model architecture is based on a convolutional neural network (CNN) implemen
 
 ## Dataset
 <br>
-The model was trained on a custom dataset consisting of videos of individuals performing different fitness exercises. These videos were annotated with pose landmarks using the MediaPipe Pose Detection framework.
+The model was trained on a custom dataset consisting of images that captured from different videos of individuals performing different fitness exercises. These images were annotated with pose landmarks using the MediaPipe Pose Detection framework.
 
 <br>
 <br>
 
 ## IMAGE COLLECTING:
  <br>
- Here is a file to collect Data
 -to collect images: 
 1- Collect Videos of people Performing the exercises you want
 <br>
@@ -46,9 +45,16 @@ The model was trained on a custom dataset consisting of videos of individuals pe
 ## DATA PROCESSING:
 
 - after collecting all the Videos and running DataCollection.py to extract frames ..
-, Run the file 'DataPreprocessing.py' to extract landmarks and store them .
+, Run the file 'DataPreprocessing.py' to extract poe landmarks from each frame and store them .
 
+## MODEL TRAINING:
 <br>
+- after doing data prossesing go to Model.py file or Model.ipynb(same) to train mode.
+- modify NUM_CLASSES and exercise_labels to.
+- run the file.
+
+## Model testing:
+- for testing model via web cam run AITrainer.py file. 
 <br>
 
 ## Files
@@ -57,14 +63,19 @@ The model was trained on a custom dataset consisting of videos of individuals pe
 
 DataCollection.py: this script is used to extract frames from videos and storing them is classes
 <br>
-DataPreprocessing.py :  this script is used to extract Landmarks from the Photos and storing them in Numpy array
+DataPreprocessing.py :  this script is used to extract pose Landmarks from the Photos and storing them in Numpy array
 <br>
 
-AiTrainer.py: This script allows for real-time inference using the trained model on webcam or video input. It loads the trained model, processes input frames using MediaPipe Pose Detection, and outputs predictions for each frame.
-<br>
-
-ModelTraining2.py: This script is used for training the model using the provided dataset. It loads the dataset, preprocesses the data, defines and compiles the model architecture, trains the model, and saves the trained model to a specified location.
+Model.py: This script is used for training the model using the provided dataset. It loads the dataset, preprocesses the data, defines and compiles the model architecture, trains the model, and saves the trained model to a specified location.
 also This script is for evaluating the model's performance and generating analysis reports. It loads the trained model, evaluates it on a separate test dataset, calculates evaluation metrics such as accuracy, precision, recall, and F1-score, and generates a confusion matrix for visualizing the model's performance across different classes.
+
+<br>
+AiTrainer.py: This script allows for real-time inference using the trained model on webcam or video input. It loads the trained model, processes input frames using MediaPipe Pose Detection, and outputs predictions for each frame.
+
+<br>
+Model.ipynb: This script is the same file as Model.py.
+<br>
+results folder: this folder contains result analysis of the Model such as confusion matrix.
 <br>
 
 requirements.txt: This file contains a list of dependencies required to run the scripts. You can install these dependencies using pip install -r requirements.txt.
@@ -74,5 +85,5 @@ requirements.txt: This file contains a list of dependencies required to run the 
 
 ## EVALUATION
 
--run the file 'ModelTraining.py' to evalute model performance and calculate accuracy ,and to produce the confusion_matrix
+-run the file 'Model.py' to evalute model performance and calculate accuracy ,and to produce the confusion_matrix
 <br>
