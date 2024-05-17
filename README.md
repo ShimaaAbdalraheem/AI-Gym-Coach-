@@ -1,7 +1,7 @@
 ## Fitness Exercise Classifier Model 
 ## Overview
 
-This repository contains a deep learning model for classifying fitness exercises based on Frames extracted from videos. The model is built using TensorFlow and Opencv and Mediapipe and is capable of recognizing various exercises such as Lunges, Side Plank, and Upper Crunches.
+This repository contains a deep learning model for classifying fitness exercises based on Frames extracted from videos. The model is built using TensorFlow and Opencv and Mediapipe and is capable of recognizing various exercises such as Lunges, Side Plank, and Upper Crunches and evaluates it as true or wrong.
 
 <br>
 
