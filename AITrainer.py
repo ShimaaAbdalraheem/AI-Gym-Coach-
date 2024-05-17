@@ -14,7 +14,7 @@ model_save_path = 'exercise_classifier_model_v2.keras'
 model = tf.keras.models.load_model(model_save_path)
 
 #model test by webcam
-cap = cv2.VideoCapture('demo.mp4')
+cap = cv2.VideoCapture(0)
 
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5)
